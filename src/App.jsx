@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import NavigationBar from './component/Header'
+import NavigationBar from './component/header'
 import TeaserPage from './pages/teaser_page'
 import LandingPage from './pages/landing_page';
+import PriLogo from './assets/Kata Jadi Nyata First Logo.png';
+import SecLogo from './assets/Kata Jadi Nyata Secondary Logo.png';
 
 function App() {
 
@@ -34,6 +36,7 @@ const [currentPage, setCurrentPage] = useState('teaser');
     {/* Main Page Content */}
      <div className="relative z-10 w-full min-h-dvh">
         {/* <NavigationBar /> */}
+        {/* <LandingPage PriLogo={PriLogo} SecLogo={SecLogo} /> */}
         <TeaserPage />
       </div>
 

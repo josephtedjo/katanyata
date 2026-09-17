@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NavigationBar from "../component/Header";
 import GodFinger from "../assets/God's hand finger.png";
 import HumanFinger from "../assets/Human's hand finger.png";
 

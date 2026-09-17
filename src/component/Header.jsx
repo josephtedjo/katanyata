@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "../assets/Kata Jadi Nyata First Logo.png";
+import logo from "../assets/Kata Jadi Nyata Secondary Logo.png";
 
 export default function NavigationBar() {
     return (
-        <nav className="w-full max-w-12xl mx-auto px-4 py-8 flex items-center justify-between z-10">
+        <nav className="sticky top-0 z-50  bg-white/10 backdrop-blur-md w-full max-w-12xl mx-auto px-4 py-8 flex items-center justify-between">
             {/* Brand Name - Left */}
             <div className="flex items-center">
                 <a href="#" className="font-bold text-2xl text-gray-800 hover:text-purple-600 transition-colors ml-12">
-                    <img src={logo} alt="Logo" className="w-40 h-auto drop-shadow-xl" />
+                    <img src={logo} alt="Logo" className="w-25 h-auto drop-shadow-xl" />
                 </a>
             </div>
 
@@ -16,14 +16,14 @@ export default function NavigationBar() {
                 <li>
                     <a href="#">
                        <span className="text-gray-600 hover:text-purple-600 transition-colors font-medium text-lg">
-                        Cerita Dibalik Kata Nyata
+                        Cerita di Balik Kata Nyata
                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="#" >
                         <span className="text-gray-600 hover:text-purple-600 transition-colors font-medium text-lg">
-                            Apa saja disini
+                            Apa saja di sini
                         </span>
                     </a>
                 </li>
