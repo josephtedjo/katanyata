@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay"; // Optional
+import { Link } from "react-router-dom";
 import { carouselData } from "../data";
 
 export default function Carousel() {
@@ -45,20 +46,32 @@ export default function Carousel() {
   return (
     <div className="relative w-full max-w-[1280px] mx-auto px-4 py-8">
       {/* 2. Embla Viewport */}
-      <div className="overflow-hidden rounded-2xl shadow-lg" ref={emblaRef}>
+      <div className="overflow-hidden rounded-2xl shadow-lg h-full" ref={emblaRef}>
         {/* 3. Embla Container */}
-        <div className="flex">
-          {carouselData.map((item) => (
-            /* 4. Embla Slides */
-            <div
-              key={item.id}
-              className="flex-[0_0_100%] min-w-0 aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9]"
-            >
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-2xl" />
-              </a>
-            </div>
-          ))}
+        <div className="flex ">
+          {carouselData.map((item) => {
+            const isInternal = item.link?.startsWith("/");
+
+            return (
+              /* 4. Embla Slides */
+              <div
+                key={item.id}
+                className="flex-[0_0_100%] min-w-0 h-80 sm:h-[480px] md:h-[540px] lg:h-[600px] flex items-center justify-center bg-gradient-to-tr from-indigo-500 to-purple-600 text-white font-bold text-2xl"
+              >
+                {isInternal ? (
+                  <Link to={item.link} className="w-full h-full block">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-2xl" />
+                  </Link>
+                ) : item.link ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-full h-full block">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-2xl" />
+                  </a>
+                ) : (
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-2xl" />
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
 

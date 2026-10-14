@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BazarTenant, KataTenant, NyataTenant, JanjiTenant } from "../data";
+import { FnBTenant, HobbyTenant, FunTenant, HealthTenant, EducationTenant, BeautyTenant, FashionTenant, HospitalityTenant, AutomotiveTenant, FinanceTenant, OthersTenant } from "../data";
 import bazarTitle from "../assets/hero section KataNyata Bazar.png";
 import CustFooter from "../component/Footer";
 
@@ -53,17 +53,38 @@ export default function BazarPage() {
                 <div id="tenants" className="mt-16">
                     <h2 className="text-black text-xl sm:text-2xl md:text-4xl font-bold mb-6 md:mb-10">Tenants</h2>
 
-                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#7B9E87] to-[#A8C4AE] bg-clip-text text-transparent">Nyata Tenant</h3>
-                    <TenantGrid items={NyataTenant} />
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#7B9E87] to-[#A8C4AE] bg-clip-text text-transparent">Food and Beverages Tenant</h3>
+                    <TenantGrid items={FnBTenant} />
 
-                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#9B7EB8] to-[#C4AEDA] bg-clip-text text-transparent">Janji Tenant</h3>
-                    <TenantGrid items={JanjiTenant} />
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#9B7EB8] to-[#C4AEDA] bg-clip-text text-transparent">Hobby Tenant</h3>
+                    <TenantGrid items={HobbyTenant} />
 
-                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#C9705A] to-[#E8A898] bg-clip-text text-transparent">Kata Tenant</h3>
-                    <TenantGrid items={KataTenant} />
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#C9705A] to-[#E8A898] bg-clip-text text-transparent">Fun Tenant</h3>
+                    <TenantGrid items={FunTenant} />
 
-                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Bazar Tenant</h3>
-                    <TenantGrid items={BazarTenant} />
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Health Tenant</h3>
+                    <TenantGrid items={HealthTenant} />
+
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Education Tenant</h3>
+                    <TenantGrid items={EducationTenant} />
+
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Beauty Tenant</h3>
+                    <TenantGrid items={BeautyTenant} />
+
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Fashion Tenant</h3>
+                    <TenantGrid items={FashionTenant} />
+
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Hospitality Tenant</h3>
+                    <TenantGrid items={HospitalityTenant} />
+
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Automotive Tenant</h3>
+                    <TenantGrid items={AutomotiveTenant} />
+
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Finance Tenant</h3>
+                    <TenantGrid items={FinanceTenant} />
+
+                    <h3 className="text-base sm:text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#A48456] to-[#F7C6D9] bg-clip-text text-transparent">Others Tenant</h3>
+                    <TenantGrid items={OthersTenant} />
                 </div>
 
                 <div id="schedule">

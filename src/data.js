@@ -17,37 +17,97 @@ import church2 from './assets/Feeds Bukel Week 2.jpg'
 import church3 from './assets/Feeds Bukel Week 3.jpg'
 import church4 from './assets/Feeds Bukel Week 4.jpg'
 
-const bazarTenantModules = import.meta.glob('./assets/Logo Tenant/Bazar - *', { eager: true });
-const bazarTenantImages = Object.fromEntries(
-    Object.entries(bazarTenantModules).map(([path, mod]) => {
-        const fileName = path.split('/').pop().replace(/^Bazar - /, '').replace(/\.[^/.]+$/, '');
+const FnBTenantModules = import.meta.glob('./assets/Logo Tenant/FnB - *', { eager: true });
+const FnBTenantImages = Object.fromEntries(
+    Object.entries(FnBTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^FnB - /, '').replace(/\.[^/.]+$/, '');
         return [fileName, mod.default];
     })
 );
 
-const kataTenantModules = import.meta.glob('./assets/Logo Tenant/Kata - *', { eager: true });
-const kataTenantImages = Object.fromEntries(
-    Object.entries(kataTenantModules).map(([path, mod]) => {
-        const fileName = path.split('/').pop().replace(/^Kata - /, '').replace(/\.[^/.]+$/, '');
+const HobbyTenantModules = import.meta.glob('./assets/Logo Tenant/Hobby - *', { eager: true });
+const HobbyTenantImages = Object.fromEntries(
+    Object.entries(HobbyTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Hobby - /, '').replace(/\.[^/.]+$/, '');
         return [fileName, mod.default];
     })
 );
 
-const janjiTenantModules = import.meta.glob('./assets/Logo Tenant/Janji - *', { eager: true });
-const janjiTenantImages = Object.fromEntries(
-    Object.entries(janjiTenantModules).map(([path, mod]) => {
-        const fileName = path.split('/').pop().replace(/^Janji - /, '').replace(/\.[^/.]+$/, '');
+const FunTenantModules = import.meta.glob('./assets/Logo Tenant/Fun- *', { eager: true });
+const FunTenantImages = Object.fromEntries(
+    Object.entries(FunTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Fun - /, '').replace(/\.[^/.]+$/, '');
         return [fileName, mod.default];
     })
 );
 
-const nyataTenantModules = import.meta.glob('./assets/Logo Tenant/Nyata - *', { eager: true });
-const nyataTenantImages = Object.fromEntries(
-    Object.entries(nyataTenantModules).map(([path, mod]) => {
-        const fileName = path.split('/').pop().replace(/^Nyata - /, '').replace(/\.[^/.]+$/, '');
+const HealthTenantModules = import.meta.glob('./assets/Logo Tenant/Health - *', { eager: true });
+const HealthTenantImages = Object.fromEntries(
+    Object.entries(HealthTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Health - /, '').replace(/\.[^/.]+$/, '');
         return [fileName, mod.default];
     })
 );
+
+const EducationTenantModules = import.meta.glob('./assets/Logo Tenant/Education - *', { eager: true });
+const EducationTenantImages = Object.fromEntries(
+    Object.entries(EducationTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Education - /, '').replace(/\.[^/.]+$/, '');
+        return [fileName, mod.default];
+    })
+);
+
+const BeautyTenantModules = import.meta.glob('./assets/Logo Tenant/Beauty - *', { eager: true });
+const BeautyTenantImages = Object.fromEntries(
+    Object.entries(BeautyTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Beauty - /, '').replace(/\.[^/.]+$/, '');
+        return [fileName, mod.default];
+    })
+);
+
+const FashionTenantModules = import.meta.glob('./assets/Logo Tenant/Fashion - *', { eager: true });
+const FashionTenantImages = Object.fromEntries(
+    Object.entries(FashionTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Fashion - /, '').replace(/\.[^/.]+$/, '');
+        return [fileName, mod.default];
+    })
+);
+
+
+const HospitalityTenantModules = import.meta.glob('./assets/Logo Tenant/Hospitality - *', { eager: true });
+const HospitalityTenantImages = Object.fromEntries(
+    Object.entries(HospitalityTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Hospitality - /, '').replace(/\.[^/.]+$/, '');
+        return [fileName, mod.default];
+    })
+);
+
+const AutomotiveTenantModules = import.meta.glob('./assets/Logo Tenant/Automotive - *', { eager: true });
+const AutomotiveTenantImages = Object.fromEntries(
+    Object.entries(AutomotiveTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Automotive - /, '').replace(/\.[^/.]+$/, '');
+        return [fileName, mod.default];
+    })
+);
+
+const FinanceTenantModules = import.meta.glob('./assets/Logo Tenant/Finance - *', { eager: true });
+const FinanceTenantImages = Object.fromEntries(
+    Object.entries(FinanceTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Finance - /, '').replace(/\.[^/.]+$/, '');
+        return [fileName, mod.default];
+    })
+);
+
+const OthersTenantModules = import.meta.glob('./assets/Logo Tenant/Others - *', { eager: true });
+const OthersTenantImages = Object.fromEntries(
+    Object.entries(OthersTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Others - /, '').replace(/\.[^/.]+$/, '');
+        return [fileName, mod.default];
+    })
+);
+
+
+
 
 
 export const carouselData = [
@@ -55,7 +115,7 @@ export const carouselData = [
         id: 1,
         title: "Kata Nyata Bazar",
         image: bannerKataNyata1,
-        link: "",
+        link: "/bazar",
     },
     {
         id: 2,
@@ -85,7 +145,7 @@ export const carouselData = [
         id: 6,
         title: "Donor Darah",
         image: bannerKataNyata6,
-        link: "https://gkipts.id/darahbukel26"
+        link: "https://gkipts.id/donordarahbukel26"
     }
 ]
 
@@ -182,22 +242,57 @@ export const carouselEvent = [
     },
 ]
 
-export const BazarTenant = Object.entries(bazarTenantImages).map(([name, img]) => ({
+export const FnBTenant = Object.entries(FnBTenantImages).map(([name, img]) => ({
     name,
     img,
 }));
 
-export const KataTenant = Object.entries(kataTenantImages).map(([name, img]) => ({
+export const HobbyTenant = Object.entries(HobbyTenantImages).map(([name, img]) => ({
     name,
     img,
 }));
 
-export const JanjiTenant = Object.entries(janjiTenantImages).map(([name, img]) => ({
+export const FunTenant = Object.entries(FunTenantImages).map(([name, img]) => ({
     name,
     img,
 }));
 
-export const NyataTenant = Object.entries(nyataTenantImages).map(([name, img]) => ({
+export const HealthTenant = Object.entries(HealthTenantImages).map(([name, img]) => ({
+    name,
+    img,
+}));
+
+export const EducationTenant = Object.entries(EducationTenantImages).map(([name, img]) => ({
+    name,
+    img,
+}));
+
+export const BeautyTenant = Object.entries(BeautyTenantImages).map(([name, img]) => ({
+    name,
+    img,
+}));
+
+export const HospitalityTenant = Object.entries(HospitalityTenantImages).map(([name, img]) => ({
+    name,
+    img,
+}));
+
+export const FashionTenant = Object.entries(FashionTenantImages).map(([name, img]) => ({
+    name,
+    img,
+}));
+
+export const AutomotiveTenant = Object.entries(AutomotiveTenantImages).map(([name, img]) => ({
+    name,
+    img,
+}));
+
+export const FinanceTenant = Object.entries(FinanceTenantImages).map(([name, img]) => ({
+    name,
+    img,
+}));
+
+export const OthersTenant = Object.entries(OthersTenantImages).map(([name, img]) => ({
     name,
     img,
 }));
