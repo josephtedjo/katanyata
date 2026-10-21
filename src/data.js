@@ -33,7 +33,7 @@ const HobbyTenantImages = Object.fromEntries(
     })
 );
 
-const FunTenantModules = import.meta.glob('./assets/Logo Tenant/Fun- *', { eager: true });
+const FunTenantModules = import.meta.glob('./assets/Logo Tenant/Fun - *', { eager: true });
 const FunTenantImages = Object.fromEntries(
     Object.entries(FunTenantModules).map(([path, mod]) => {
         const fileName = path.split('/').pop().replace(/^Fun - /, '').replace(/\.[^/.]+$/, '');
@@ -57,18 +57,10 @@ const EducationTenantImages = Object.fromEntries(
     })
 );
 
-const BeautyTenantModules = import.meta.glob('./assets/Logo Tenant/Beauty - *', { eager: true });
-const BeautyTenantImages = Object.fromEntries(
-    Object.entries(BeautyTenantModules).map(([path, mod]) => {
-        const fileName = path.split('/').pop().replace(/^Beauty - /, '').replace(/\.[^/.]+$/, '');
-        return [fileName, mod.default];
-    })
-);
-
-const FashionTenantModules = import.meta.glob('./assets/Logo Tenant/Fashion - *', { eager: true });
-const FashionTenantImages = Object.fromEntries(
-    Object.entries(FashionTenantModules).map(([path, mod]) => {
-        const fileName = path.split('/').pop().replace(/^Fashion - /, '').replace(/\.[^/.]+$/, '');
+const FashionBeautyTenantModules = import.meta.glob('./assets/Logo Tenant/Fashion & Beauty - *', { eager: true });
+const FashionBeautyTenantImages = Object.fromEntries(
+    Object.entries(FashionBeautyTenantModules).map(([path, mod]) => {
+        const fileName = path.split('/').pop().replace(/^Fashion & Beauty - /, '').replace(/\.[^/.]+$/, '');
         return [fileName, mod.default];
     })
 );
@@ -267,7 +259,7 @@ export const EducationTenant = Object.entries(EducationTenantImages).map(([name,
     img,
 }));
 
-export const BeautyTenant = Object.entries(BeautyTenantImages).map(([name, img]) => ({
+export const FashionBeautyTenant = Object.entries(FashionBeautyTenantImages).map(([name, img]) => ({
     name,
     img,
 }));
@@ -277,10 +269,6 @@ export const HospitalityTenant = Object.entries(HospitalityTenantImages).map(([n
     img,
 }));
 
-export const FashionTenant = Object.entries(FashionTenantImages).map(([name, img]) => ({
-    name,
-    img,
-}));
 
 export const AutomotiveTenant = Object.entries(AutomotiveTenantImages).map(([name, img]) => ({
     name,
@@ -296,3 +284,48 @@ export const OthersTenant = Object.entries(OthersTenantImages).map(([name, img])
     name,
     img,
 }));
+
+export const rundown = [
+{
+  day: "Jumat",
+  date: "2026-10-23",
+  schedule: [
+    { time: "10.30", title: "Pembukaan Bazar Bulan Keluarga" },
+    { time: "11.05", title: "Angklung Komisi Usia Lanjut (Angklung Gita Betlehem)" },
+    { time: "11.35", title: "Line dance Komisi Usia Lanjut" },
+    { time: "13.45", title: "Klabatim Live Podcast" },
+    { time: "15.45", title: "Edukasi bersama dr. Priyadi W., Sp. P" },
+    { time: "18.30", title: "Edukasi bersama RS JEC Candi @ Semarang" },    
+    { time: "19.30", title: "Orkes Kerontjong Karimoeni" }, 
+  ]
+},
+{
+    day: "Sabtu",
+    date: "2026-10-24",
+  schedule: [
+    { time: "11.00", title: "PTS Talk Live Podcast" },
+    { time: "12.15", title: "Penampilan Sekolah Dian Wacana" },
+    { time: "13.15", title: "Penampilan YSKI" },
+    { time: "14.15", title: "Peterongan Music Course" },
+    { time: "16.00", title: "Lomba Cerita Alkitab" },
+    { time: "19.00", title: "Penampilan Twin R Music" },
+  ]
+},
+{
+    day: "Minggu",
+    date: "2026-10-25",
+  schedule: [
+    { time: "10.45", title: "Pengarahan dan kegiatan Lomba Mewarnai serta Peterongan's Next Star bersamaan" },
+    { time: "11.15", title: "Lomba Mewarnai (1-3 SD) & Peterongan's Next Star" },
+    { time: "12.15", title: "Lomba Mewarnai (4-6 SD) & Peterongan's Next Star" },
+    { time: "13.30", title: "Pengumuman Pemenang Lomba Mewarnai" },
+    { time: "13.45", title: "Pengumuman Pemenang Peterongan's Next Star" },
+    { time: "14.00", title: "Penampilan Sekolah Ciputra Kasih" },
+    { time: "15.00", title: "Penampilan YSKI" },
+    { time: "18.20", title: "Live Performance by MusicPesta" },
+    { time: "18.45", title: "Edukasi bersama RS JEC-Candi @ Semarang" },
+    { time: "19.30", title: "Pembagian Door Prize Utama " },
+    { time: "19.50", title: "Penutupan Bazar Bulan Keluarga 2026 " },
+  ],
+}
+];
