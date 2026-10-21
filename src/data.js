@@ -288,7 +288,7 @@ export const OthersTenant = Object.entries(OthersTenantImages).map(([name, img])
 export const rundown = [
 {
   day: "Jumat",
-  date: "2026-10-23",
+  date: "23 Oktober 2026",
   schedule: [
     { time: "10.30", title: "Pembukaan Bazar Bulan Keluarga" },
     { time: "11.05", title: "Angklung Komisi Usia Lanjut (Angklung Gita Betlehem)" },
@@ -301,7 +301,7 @@ export const rundown = [
 },
 {
     day: "Sabtu",
-    date: "2026-10-24",
+    date: "24 Oktober 2026",
   schedule: [
     { time: "11.00", title: "PTS Talk Live Podcast" },
     { time: "12.15", title: "Penampilan Sekolah Dian Wacana" },
@@ -313,7 +313,7 @@ export const rundown = [
 },
 {
     day: "Minggu",
-    date: "2026-10-25",
+    date: "25 Oktober 2026",
   schedule: [
     { time: "10.45", title: "Pengarahan dan kegiatan Lomba Mewarnai serta Peterongan's Next Star bersamaan" },
     { time: "11.15", title: "Lomba Mewarnai (1-3 SD) & Peterongan's Next Star" },
