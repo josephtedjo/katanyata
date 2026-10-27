@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import RoundedButton from "../component/RoundedButton";
 
-export default function GalleryPage() {
+export default function GalleryPage({link}) {
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -85,7 +85,7 @@ export default function GalleryPage() {
                     </p>
                     <RoundedButton 
                         text={"Klik disini"} 
-                        link={"https://photos.app.goo.gl/SAY9odcueUCQQKy76"} 
+                        link={link} 
                         className={"mt-8 sm:mt-12 self-center sm:self-start hover:text-gray-400"}
                         spanClass={"bg-gradient-to-r from-[#D9C6EC] via-[#fdf3d0] to-[#d2f3ee]"}
                     />

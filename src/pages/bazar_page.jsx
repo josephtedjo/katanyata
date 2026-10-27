@@ -5,6 +5,7 @@ import CustFooter from "../component/Footer";
 import { rundown } from "../data";
 import RundownSection from "../component/RundownSection";
 import denah from '../assets/denah.jpg'
+import GalleryPage from "./gallery_page";
 
 
 
@@ -36,6 +37,7 @@ export default function BazarPage() {
             <img src={bazarTitle} alt="Bazar KataNyata" className="w-full object-contain mb-20" />
             <div id="Bazar" className="flex flex-col px-4 sm:px-8 md:px-12 sm:my-8 md:my-12">
             <div className="flex flex-col w-full gap-6 mt-4">
+                <GalleryPage link={"https://photos.app.goo.gl/AYpmF9iQ9ZqGT8Pa8"} />
                 {/* Schedule */}
                 <div id="schedule" className="flex flex-row gap-4">
                     <h2 className="text-black text-xl sm:text-2xl md:text-4xl font-bold mb-3">Jadwal Event Bazar</h2>

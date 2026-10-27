@@ -30,7 +30,7 @@ export default function LandingPage({PriLogo, SecLogo}) {
   <div className="bg-gradient-to-b from-transparent via-white/20 via-white/40 to-white/60">
     <EventsPage />
     <div className="bg-gradient-to-b from-white/60 via-white/70 to-white/90">
-      <GalleryPage />
+      <GalleryPage link={"https://photos.app.goo.gl/SAY9odcueUCQQKy76"}/>
     </div>
     <div className="bg-gradient-to-b from-white/90 to-white/90">
       <SocMedPage />
